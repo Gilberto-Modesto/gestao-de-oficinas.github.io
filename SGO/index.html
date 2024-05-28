@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestão de Oficina</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="d-flex">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary flex-column vh-100">
+      <a class="navbar-brand" href="#">Gestão de Oficina</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav flex-column mt-2 w-100">
+          <li class="nav-item">
+            <a class="nav-link" href="#clientesSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Clientes</a>
+            <ul class="collapse list-unstyled" id="clientesSubMenu">
+              <li class="nav-item"><a class="nav-link" href="#clientes" onclick="showSection('clientes')">Cadastrar Cliente</a></li>
+              <li class="nav-item"><a class="nav-link" href="#consulta-clientes" onclick="showSection('consulta-clientes')">Consultar Clientes</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#veiculosSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Veículos</a>
+            <ul class="collapse list-unstyled" id="veiculosSubMenu">
+              <li class="nav-item"><a class="nav-link" href="#veiculos" onclick="showSection('veiculos')">Cadastrar Veículo</a></li>
+              <li class="nav-item"><a class="nav-link" href="#consulta-veiculos" onclick="showSection('consulta-veiculos')">Consultar Veículos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#orcamentosSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orçamentos</a>
+            <ul class="collapse list-unstyled" id="orcamentosSubMenu">
+              <li class="nav-item"><a class="nav-link" href="#orcamentos" onclick="showSection('orcamentos')">Cadastrar Orçamento</a></li>
+              <li class="nav-item"><a class="nav-link" href="#consulta-orcamentos" onclick="showSection('consulta-orcamentos')">Consultar Orçamentos</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container-fluid mt-4 content">
+      <!-- Sections -->
+      <div id="clientes" class="section mt-5 pt-4">
+        <h2 class="text-center">Cadastro de Cliente</h2>
+        <form id="formCliente" class="form-container" onsubmit="adicionarCliente(event)">
+          <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" placeholder="Digite o nome do cliente" required>
+          </div>
+          <div class="form-group">
+            <label for="dataNascimento">Data de Nascimento:</label>
+            <input type="date" class="form-control" id="dataNascimento" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone:</label>
+            <input type="text" class="form-control" id="telefone" placeholder="Digite o telefone do cliente" required>
+          </div>
+          <div class="form-group">
+            <label for="endereco">Endereço:</label>
+            <input type="text" class="form-control" id="endereco" placeholder="Digite o endereço do cliente" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </form>
+      </div>
+
+      <div id="consulta-clientes" class="section mt-5 pt-4" style="display:none;">
+        <h2 class="text-center">Consulta de Clientes</h2>
+        <ul id="listaClientes" class="list-group"></ul>
+      </div>
+
+      <div id="veiculos" class="section mt-5 pt-4" style="display:none;">
+        <h2 class="text-center">Cadastro de Veículo</h2>
+        <form id="formVeiculo" class="form-container" onsubmit="adicionarVeiculo(event)">
+          <div class="form-group">
+            <label for="clienteId">Cliente:</label>
+            <select class="form-control" id="clienteId" required></select>
+          </div>
+          <div class="form-group">
+            <label for="marca">Marca:</label>
+            <input type="text" class="form-control" id="marca" placeholder="Digite a marca do veículo" required>
+          </div>
+          <div class="form-group">
+            <label for="modelo">Modelo:</label>
+            <input type="text" class="form-control" id="modelo" placeholder="Digite o modelo do veículo" required>
+          </div>
+          <div class="form-group">
+            <label for="ano">Ano:</label>
+            <input type="number" class="form-control" id="ano" placeholder="Digite o ano do veículo" required>
+          </div>
+          <div class="form-group">
+            <label for="placa">Placa:</label>
+            <input type="text" class="form-control" id="placa" placeholder="Digite a placa do veículo" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </form>
+      </div>
+
+      <div id="consulta-veiculos" class="section mt-5 pt-4" style="display:none;">
+        <h2 class="text-center">Consulta de Veículos</h2>
+        <ul id="listaVeiculos" class="list-group"></ul>
+      </div>
+
+      <div id="orcamentos" class="section mt-5 pt-4" style="display:none;">
+        <h2 class="text-center">Cadastro de Orçamento</h2>
+        <form id="formOrcamento" class="form-container" onsubmit="adicionarOrcamento(event)">
+          <div class="form-group">
+            <label for="veiculoId">Veículo:</label>
+            <select class="form-control" id="veiculoId" required></select>
+          </div>
+          <div class="form-group">
+            <label for="descricaoServico">Descrição do Serviço:</label>
+            <input type="text" class="form-control" id="descricaoServico" placeholder="Descreva o serviço" required>
+          </div>
+          <div id="pecas-container" class="form-group">
+            <label>Peças:</label>
+            <div class="form-group">
+              <input type="text" class="form-control mb-2" placeholder="Nome da peça">
+              <input type="number" class="form-control mb-2" placeholder="Preço">
+            </div>
+            <button type="button" class="btn btn-secondary" onclick="adicionarPeca()">Adicionar Peça</button>
+          </div>
+          <div class="form-group">
+            <label for="valorTotal">Valor Total:</label>
+            <input type="number" class="form-control" id="valorTotal" placeholder="Digite o valor total" required>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+        </form>
+      </div>
+
+      <div id="consulta-orcamentos" class="section mt-5 pt-4" style="display:none;">
+        <h2 class="text-center">Consulta de Orçamentos</h2>
+        <ul id="listaOrcamentos" class="list-group"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cliente.js"></script>
+  <script src="js/veiculo.js"></script>
+  <script src="js/orcamento.js"></script>
+</body>
+</html>
