@@ -54,21 +54,17 @@ window.onload = function() {
   mostrarVeiculos();
   mostrarOrcamentos();
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function() {
-      document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active'));
-      this.classList.add('active');
-    });
+  $('.nav-link').on('click', function() {
+      $('.nav-link').removeClass('active');
+      $(this).addClass('active');
   });
 
-  document.querySelectorAll('.navbar-nav .collapse').forEach(collapse => {
-    collapse.addEventListener('hide.bs.collapse', function() {
-      this.previousElementSibling.classList.remove('active');
-    });
+  $('.navbar-nav .collapse').on('hide.bs.collapse', function() {
+      $(this).prev('.nav-link').removeClass('active');
+  });
 
-    collapse.addEventListener('show.bs.collapse', function() {
-      document.querySelectorAll('.navbar-nav .collapse.show').forEach(show => show.classList.remove('show'));
-      this.previousElementSibling.classList.add('active');
-    });
+  $('.navbar-nav .collapse').on('show.bs.collapse', function() {
+      $('.navbar-nav .collapse.show').collapse('hide');
+      $(this).prev('.nav-link').addClass('active');
   });
 };

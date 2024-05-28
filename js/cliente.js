@@ -1,59 +1,96 @@
 function adicionarCliente(event) {
   event.preventDefault();
 
-  const nome = document.getElementById('nome').value.trim();
+  const nome = document.getElementById('nome').value;
   const dataNascimento = document.getElementById('dataNascimento').value;
-  const telefone = document.getElementById('telefone').value.trim();
-  const endereco = document.getElementById('endereco').value.trim();
+  const telefone = document.getElementById('telefone').value;
+  const endereco = document.getElementById('endereco').value;
 
-  // Validação simples dos campos
-  if (!nome || !dataNascimento || !telefone || !endereco) {
-    alert('Por favor, preencha todos os campos obrigatórios.');
-    return;
-  }
+  const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 
-  try {
-    const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-
-    const novoCliente = {
+  const novoCliente = {
       id: Date.now(),
       nome,
       dataNascimento,
       telefone,
       endereco
-    };
+  };
 
-    clientes.push(novoCliente);
-    localStorage.setItem('clientes', JSON.stringify(clientes));
+  clientes.push(novoCliente);
+  localStorage.setItem('clientes', JSON.stringify(clientes));
 
-    alert('Cliente cadastrado com sucesso!');
-    document.getElementById('formCliente').reset();
-    updateSelectOptions();
-    mostrarClientes();
-  } catch (error) {
-    console.error('Erro ao salvar cliente:', error);
-    alert('Ocorreu um erro ao salvar o cliente. Por favor, tente novamente.');
-  }
+  alert('Cliente cadastrado com sucesso!');
+  document.getElementById('formCliente').reset();
+  updateSelectOptions();
+  mostrarClientes();
 }
 
 function mostrarClientes() {
   const listaClientes = document.getElementById('listaClientes');
   listaClientes.innerHTML = '';
 
-  try {
-    const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
-    const fragment = document.createDocumentFragment();
+  const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
 
-    clientes.forEach(cliente => {
-      const li = document.createElement('li');
-      li.classList.add('list-group-item');
-      li.textContent = `${cliente.nome} - ${cliente.telefone}`;
-      fragment.appendChild(li);
-    });
-
-    listaClientes.appendChild(fragment);
-  } catch (error) {
-    console.error('Erro ao carregar clientes:', error);
-    alert('Ocorreu um erro ao carregar a lista de clientes. Por favor, tente novamente.');
+  if (clientes.length === 0) {
+      listaClientes.innerHTML = '<p>Nenhum cliente cadastrado.</p>';
+      return;
   }
+
+  const filterDiv = document.createElement('div');
+  filterDiv.classList.add('filter-container', 'mb-3');
+
+  ['Nome', 'Data de Nascimento', 'Telefone', 'Endereço'].forEach((headerText, index) => {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.placeholder = `Filtrar por ${headerText}`;
+      input.classList.add('form-control', 'filter-input');
+      input.dataset.column = index;
+      filterDiv.appendChild(input);
+  });
+
+  listaClientes.appendChild(filterDiv);
+
+  const table = document.createElement('table');
+  table.classList.add('table', 'table-striped');
+
+  const thead = document.createElement('thead');
+  const headerRow = document.createElement('tr');
+
+  ['Nome', 'Data de Nascimento', 'Telefone', 'Endereço'].forEach(headerText => {
+      const th = document.createElement('th');
+      th.textContent = headerText;
+      headerRow.appendChild(th);
+  });
+
+  thead.appendChild(headerRow);
+  table.appendChild(thead);
+
+  const tbody = document.createElement('tbody');
+  clientes.forEach(cliente => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+          <td>${cliente.nome}</td>
+          <td>${cliente.dataNascimento}</td>
+          <td>${cliente.telefone}</td>
+          <td>${cliente.endereco}</td>
+      `;
+      tbody.appendChild(tr);
+  });
+
+  table.appendChild(tbody);
+  listaClientes.appendChild(table);
+
+  document.querySelectorAll('.filter-input').forEach(input => {
+      input.addEventListener('input', function() {
+          const column = this.dataset.column;
+          const value = this.value.toLowerCase();
+          filterTable(tbody, column, value);
+      });
+  });
+}
+
+function filterTable(tbody, column, value) {
+  Array.from(tbody.rows).forEach(row => {
+      row.style.display = row.cells[column].textContent.toLowerCase().includes(value) ? '' : 'none';
+  });
 }
