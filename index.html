@@ -18,21 +18,21 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav flex-column mt-2">
           <li class="nav-item">
-            <a class="nav-link" href="#clientesSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Clientes</a>
+            <a class="nav-link dropdown-toggle" href="#clientesSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="clientesSubMenu">Clientes</a>
             <ul class="collapse list-unstyled" id="clientesSubMenu">
               <li class="nav-item"><a class="nav-link" href="#clientes" onclick="showSection('clientes')">Cadastrar Cliente</a></li>
               <li class="nav-item"><a class="nav-link" href="#consulta-clientes" onclick="showSection('consulta-clientes')">Consultar Clientes</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#veiculosSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Veículos</a>
+            <a class="nav-link dropdown-toggle" href="#veiculosSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="veiculosSubMenu">Veículos</a>
             <ul class="collapse list-unstyled" id="veiculosSubMenu">
               <li class="nav-item"><a class="nav-link" href="#veiculos" onclick="showSection('veiculos')">Cadastrar Veículo</a></li>
               <li class="nav-item"><a class="nav-link" href="#consulta-veiculos" onclick="showSection('consulta-veiculos')">Consultar Veículos</a></li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#orcamentosSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Orçamentos</a>
+            <a class="nav-link dropdown-toggle" href="#orcamentosSubMenu" data-toggle="collapse" aria-expanded="false" aria-controls="orcamentosSubMenu">Orçamentos</a>
             <ul class="collapse list-unstyled" id="orcamentosSubMenu">
               <li class="nav-item"><a class="nav-link" href="#orcamentos" onclick="showSection('orcamentos')">Cadastrar Orçamento</a></li>
               <li class="nav-item"><a class="nav-link" href="#consulta-orcamentos" onclick="showSection('consulta-orcamentos')">Consultar Orçamentos</a></li>
@@ -42,9 +42,9 @@
       </div>
     </nav>
 
-    <div class="container-fluid mt-4 content">
+    <main class="container-fluid mt-4 content">
       <!-- Sections -->
-      <div id="clientes" class="section pt-4">
+      <section id="clientes" class="section pt-4">
         <form id="formCliente" class="form-container" onsubmit="adicionarCliente(event)">
           <h2 class="text-center font-weight-bold">Cadastro de Cliente</h2>
           <div class="form-group">
@@ -65,14 +65,14 @@
           </div>
           <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         </form>
-      </div>
+      </section>
 
-      <div id="consulta-clientes" class="section pt-4" style="display:none;">
+      <section id="consulta-clientes" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Clientes</h2>
         <ul id="listaClientes" class="list-group"></ul>
-      </div>
+      </section>
 
-      <div id="veiculos" class="section pt-4" style="display:none;">
+      <section id="veiculos" class="section pt-4 d-none">
         <form id="formVeiculo" class="form-container" onsubmit="adicionarVeiculo(event)">
           <h2 class="text-center font-weight-bold">Cadastro de Veículo</h2>
           <div class="form-group">
@@ -97,14 +97,14 @@
           </div>
           <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         </form>
-      </div>
+      </section>
 
-      <div id="consulta-veiculos" class="section pt-4" style="display:none;">
+      <section id="consulta-veiculos" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Veículos</h2>
         <ul id="listaVeiculos" class="list-group"></ul>
-      </div>
+      </section>
 
-      <div id="orcamentos" class="section pt-4" style="display:none;">
+      <section id="orcamentos" class="section pt-4 d-none">
         <form id="formOrcamento" class="form-container" onsubmit="adicionarOrcamento(event)">
           <h2 class="text-center font-weight-bold">Cadastro de Orçamento</h2>
           <div class="form-group">
@@ -117,25 +117,23 @@
           </div>
           <div id="pecas-container" class="form-group">
             <label>Peças:</label>
-            <div class="form-group">
-              <input type="text" class="form-control mb-2" placeholder="Nome da peça">
-              <input type="number" class="form-control mb-2" placeholder="Preço">
-            </div>
-            <button type="button" class="btn btn-secondary" onclick="adicionarPeca()">Adicionar Peça</button>
           </div>
+          <div id="add-remove-buttons" class="d-flex justify-content-between mt-2">
+            <button type="button" class="btn btn-secondary" onclick="adicionarPeca()">Adicionar Peça</button>
+        </div>
           <div class="form-group">
             <label for="valorTotal">Valor Total:</label>
             <input type="number" class="form-control" id="valorTotal" placeholder="Digite o valor total" required>
           </div>
           <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
         </form>
-      </div>
+      </section>
 
-      <div id="consulta-orcamentos" class="section pt-4" style="display:none;">
+      <section id="consulta-orcamentos" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Orçamentos</h2>
         <ul id="listaOrcamentos" class="list-group"></ul>
-      </div>
-    </div>
+      </section>
+    </main>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
