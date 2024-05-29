@@ -26,6 +26,12 @@ function adicionarVeiculo(event) {
   updateSelectOptions();
   mostrarVeiculos();
 }
+document.addEventListener('DOMContentLoaded', function() {
+  mostrarVeiculos();
+});
+document.addEventListener('DOMContentLoaded', function() {
+  mostrarVeiculos();
+});
 
 function mostrarVeiculos() {
   const listaVeiculos = document.getElementById('listaVeiculos');
@@ -41,7 +47,7 @@ function mostrarVeiculos() {
   const filterDiv = document.createElement('div');
   filterDiv.classList.add('filter-container', 'mb-3');
 
-  ['Cliente ID', 'Marca', 'Modelo', 'Ano', 'Placa'].forEach((headerText, index) => {
+  ['Marca', 'Modelo', 'Ano', 'Placa'].forEach((headerText, index) => {
       const input = document.createElement('input');
       input.type = 'text';
       input.placeholder = `Filtrar por ${headerText}`;
@@ -58,7 +64,7 @@ function mostrarVeiculos() {
   const thead = document.createElement('thead');
   const headerRow = document.createElement('tr');
 
-  ['Cliente ID', 'Marca', 'Modelo', 'Ano', 'Placa'].forEach(headerText => {
+  ['Placa', 'Marca', 'Modelo', 'Ano' ].forEach(headerText => {
       const th = document.createElement('th');
       th.textContent = headerText;
       headerRow.appendChild(th);
@@ -71,11 +77,14 @@ function mostrarVeiculos() {
   veiculos.forEach(veiculo => {
       const tr = document.createElement('tr');
       tr.innerHTML = `
-          <td>${veiculo.clienteId}</td>
+          <td>${veiculo.placa}</td>
           <td>${veiculo.marca}</td>
           <td>${veiculo.modelo}</td>
           <td>${veiculo.ano}</td>
-          <td>${veiculo.placa}</td>
+          <td>
+            <button class="btn btn-warning btn-sm" onclick="editarVeiculo(${veiculo.id})">Editar</button>
+            <button class="btn btn-danger btn-sm" onclick="excluirVeiculo(${veiculo.id})">Excluir</button>
+          </td>
       `;
       tbody.appendChild(tr);
   });
@@ -90,4 +99,59 @@ function mostrarVeiculos() {
           filterTable(tbody, column, value);
       });
   });
+}
+
+function editarVeiculo(veiculoId) {
+  const veiculos = JSON.parse(localStorage.getItem('veiculos')) || [];
+  const veiculo = veiculos.find(v => v.id === veiculoId);
+
+  if (veiculo) {
+      document.getElementById('editVeiculoId').value = veiculo.id;
+      document.getElementById('editPlaca').value = veiculo.placa;
+      document.getElementById('editMarca').value = veiculo.marca;
+      document.getElementById('editModelo').value = veiculo.modelo;
+      document.getElementById('editAno').value = veiculo.ano;
+
+      $('#editVeiculoModal').modal('show');
+  }
+}
+
+function atualizarVeiculo(event) {
+  event.preventDefault();
+
+  const veiculoId = document.getElementById('editVeiculoId').value;
+  const placa = document.getElementById('editPlaca').value;
+  const marca = document.getElementById('editMarca').value;
+  const modelo = document.getElementById('editModelo').value;
+  const ano = document.getElementById('editAno').value;
+
+  const veiculos = JSON.parse(localStorage.getItem('veiculos')) || [];
+  const veiculoIndex = veiculos.findIndex(v => v.id == veiculoId);
+
+  if (veiculoIndex !== -1) {
+      veiculos[veiculoIndex] = { id: veiculoId, placa, marca, modelo, ano };
+      localStorage.setItem('veiculos', JSON.stringify(veiculos));
+      alert('Veículo atualizado com sucesso!');
+      $('#editVeiculoModal').modal('hide');
+      mostrarVeiculos();
+  }
+}
+
+function excluirVeiculo(veiculoId) {
+  const veiculos = JSON.parse(localStorage.getItem('veiculos')) || [];
+  const updatedVeiculos = veiculos.filter(v => v.id !== veiculoId);
+
+  localStorage.setItem('veiculos', JSON.stringify(updatedVeiculos));
+  mostrarVeiculos();
+}
+
+function filterTable(tbody, column, value) {
+  const rows = tbody.getElementsByTagName('tr');
+  for (let row of rows) {
+      const cell = row.getElementsByTagName('td')[column];
+      if (cell) {
+          const text = cell.textContent || cell.innerText;
+          row.style.display = text.toLowerCase().indexOf(value) > -1 ? '' : 'none';
+      }
+  }
 }

@@ -70,6 +70,41 @@
       <section id="consulta-clientes" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Clientes</h2>
         <ul id="listaClientes" class="list-group"></ul>
+        <div class="modal fade" id="editClienteModal" tabindex="-1" aria-labelledby="editClienteModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editClienteModalLabel">Editar Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="formEditCliente" onsubmit="atualizarCliente(event)">
+                  <input type="hidden" id="editClienteId">
+                  <div class="form-group">
+                    <label for="editNome">Nome:</label>
+                    <input type="text" class="form-control" id="editNome" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editDataNascimento">Data de Nascimento:</label>
+                    <input type="date" class="form-control" id="editDataNascimento" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editTelefone">Telefone:</label>
+                    <input type="text" class="form-control" id="editTelefone" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editEndereco">Endereço:</label>
+                    <input type="text" class="form-control" id="editEndereco" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Atualizar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        
       </section>
 
       <section id="veiculos" class="section pt-4 d-none">
@@ -102,6 +137,41 @@
       <section id="consulta-veiculos" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Veículos</h2>
         <ul id="listaVeiculos" class="list-group"></ul>
+        
+    <div class="modal fade" id="editVeiculoModal" tabindex="-1" aria-labelledby="editVeiculoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editVeiculoModalLabel">Editar Veículo</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="formEditVeiculo" onsubmit="atualizarVeiculo(event)">
+              <input type="hidden" id="editVeiculoId">
+              <div class="form-group">
+                <label for="editPlaca">Placa:</label>
+                <input type="text" class="form-control" id="editPlaca" required>
+              </div>
+              <div class="form-group">
+                <label for="editMarca">Marca:</label>
+                <input type="text" class="form-control" id="editMarca" required>
+              </div>
+              <div class="form-group">
+                <label for="editModelo">Modelo:</label>
+                <input type="text" class="form-control" id="editModelo" required>
+              </div>
+              <div class="form-group">
+                <label for="editAno">Ano:</label>
+                <input type="number" class="form-control" id="editAno" required>
+              </div>
+              <button type="submit" class="btn btn-primary">Atualizar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
       </section>
 
       <section id="orcamentos" class="section pt-4 d-none">
@@ -132,6 +202,36 @@
       <section id="consulta-orcamentos" class="section pt-4 d-none">
         <h2 class="text-center font-weight-bold">Consulta de Orçamentos</h2>
         <ul id="listaOrcamentos" class="list-group"></ul>
+        <div class="modal fade" id="editOrcamentoModal" tabindex="-1" aria-labelledby="editOrcamentoModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="editOrcamentoModalLabel">Editar Orçamento</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form id="formEditOrcamento" onsubmit="atualizarOrcamento(event)">
+                  <input type="hidden" id="editOrcamentoId">
+                  <div class="form-group">
+                    <label for="editDescricaoServico">Descrição do Serviço:</label>
+                    <input type="text" class="form-control" id="editDescricaoServico" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editPecas">Peças:</label>
+                    <input type="text" class="form-control" id="editPecas" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="editValorTotal">Valor Total:</label>
+                    <input type="number" class="form-control" id="editValorTotal" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Atualizar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
   </div>
