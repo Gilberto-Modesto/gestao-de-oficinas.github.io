@@ -40,10 +40,10 @@ Projeto simples para gerenciamento de uma oficina, desenvolvido com HTML, CSS (B
 - Data:           				
 - Participante Nº:
 
-# Proposta
+## Proposta
 A proposta deste teste é verificar o entendimento e a usabilidade do projeto desenvolvido a partir das interações de um usuário representativo do público-alvo. O teste também avalia a satisfação geral do uso pelo usuário.
 
-# Questões introdutórias e tarefas
+## Questões introdutórias e tarefas
 
 Apresente de forma geral o que é o sistema para o usuário. Pergunte: “Você já ouviu falar desse tipo de sistema?”
 ____Sim    ____Não
@@ -62,11 +62,11 @@ Pergunte: “Para quem você acha que esse sistema foi desenvolvido? Por quê?�
 Pergunte: “Quem você acha que é o responsável por esse sistema?” (Por exemplo: empresa, empreendedor, marca, etc)
 
 
-# Cenário
+## Cenário
 
 Você é um paciente do Hospital São Francisco e está na sala de espera de hemodiálise e está assistindo a programação da TV presente na sala. Você percebe que há possibilidade de acessar área do paciente para ver mais notícias por meio do QRCode. Você acessa e visualiza no seu celular o sistema.
 
-* Tarefa 1
+### Tarefa 1
 Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne para a página inicial.
 
 Caminhos(s)
@@ -84,7 +84,7 @@ Completou com dificuldade ou ajuda
 Completou facilmente	
 O usuário ficou na dúvida como retornar para a página inicial porque teve dificuldade de localizar o “voltar” na tela (abaixo do artigo). Ele preferiu utilizar o “voltar” do navegar página por página.
 
-* Tarefa 2
+### Tarefa 2
 Jogue uma partida do jogo de xadrez no sistema e, ao ganhar ou perder, jogue novamente, mas agora desistindo da partida.
 
 Caminhos(s)
@@ -107,7 +107,7 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 
 
 
-* Tarefa 3
+### Tarefa 3
 Veja qual o que terá no cardápio do café da manhã do dia 03/11 e volte para a tela inicial. 
 
 Caminhos(s)
