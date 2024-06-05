@@ -73,6 +73,7 @@ Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne par
 	Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)	
 
 * Sucesso na execução da tarefa
+  
  0
   Não completou
 
@@ -81,6 +82,7 @@ Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne par
 
  2
   Completou facilmente
+  
 
  * Anotações / Observações
  
@@ -95,6 +97,7 @@ Jogue uma partida do jogo de xadrez no sistema e, ao ganhar ou perder, jogue nov
 Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)
 
 * Sucesso na execução da tarefa
+  
  0
   Não completou
 
@@ -113,8 +116,7 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 ## Tarefa 3
 Veja qual o que terá no cardápio do café da manhã do dia 03/11 e volte para a tela inicial. 
 
-* Caminhos(s)
-		
+* Caminhos(s)		
 
 Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)
 
@@ -128,6 +130,7 @@ Descrição dos passos que o usuário deveria dar para alcançar o objetivo da t
 
  2
    Completou facilmente
+
 
 * Anotações / Observações
   
