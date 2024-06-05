@@ -73,13 +73,13 @@ Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne par
 	Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)	
 
 * Sucesso na execução da tarefa
-- 0
+ 0
   Não completou
 
-- 1
+ 1
   Completou com dificuldade ou ajuda
 
-- 2
+ 2
   Completou facilmente
 
  * Anotações / Observações
@@ -95,13 +95,13 @@ Jogue uma partida do jogo de xadrez no sistema e, ao ganhar ou perder, jogue nov
 Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)
 
 * Sucesso na execução da tarefa
-- 0
+ 0
   Não completou
 
-- 1
+ 1
   Completou com dificuldade ou ajuda
 
-- 2
+ 2
   Completou facilmente
 
 * Anotações / Observações
@@ -120,13 +120,13 @@ Descrição dos passos que o usuário deveria dar para alcançar o objetivo da t
 
 * Sucesso na execução da tarefa
 
-- 0
+ 0
    Não completou
 
-- 1
+ 1
    Completou com dificuldade ou ajuda
 
-- 2
+ 2
    Completou facilmente
 
 * Anotações / Observações
@@ -138,13 +138,29 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 [Você pode adequar essa parte com outras questões significativas para a avaliação do sistema]
 
 - Qual foi a sua impressão geral do sistema?
+
+  
 - Qual foi a sua impressão sobre as atividades propostas?
+
+  
 - Você acha que este sistema é atual? Por quê?
+
+  
 - O que você mais gostou neste sistema?
+
+
 - O que você menos gostou neste sistema?
+
+  
 - Há alguma coisa que você acha que está faltando neste sistema? (Por exemplo: conteúdo, funções, etc.)
+
+  
 - Se você fosse descrever este sistema para um colega em uma sentença ou duas, o que você diria?
+
+  
 - Você gostaria de fazer algum comentário final ou pergunta?
+
+  
 
 ## Conclusões do avaliador sobre o teste com o usuário
 [Observações sobre os problemas encontrados e possíveis soluções]
