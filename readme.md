@@ -45,29 +45,29 @@ A proposta deste teste é verificar o entendimento e a usabilidade do projeto de
 
 ## Questões introdutórias e tarefas
 
-Apresente de forma geral o que é o sistema para o usuário. Pergunte: “Você já ouviu falar desse tipo de sistema?”
+- Apresente de forma geral o que é o sistema para o usuário. Pergunte: “Você já ouviu falar desse tipo de sistema?”
 ____Sim    ____Não
 Caso sim, diga-me o que você sabe sobre.
 
 
 
-Apresente a tela inicial do sistema para o usuário. Pergunte: “Apenas olhando para esse sistema, que tipo de informação você acha que poderia obter dele? Por favor, seja específico”.
+- Apresente a tela inicial do sistema para o usuário. Pergunte: “Apenas olhando para esse sistema, que tipo de informação você acha que poderia obter dele? Por favor, seja específico”.
 
 
 
-Pergunte: “Para quem você acha que esse sistema foi desenvolvido? Por quê?” (Por exemplo: cidadão, profissionais da saúde, etc.)
+- Pergunte: “Para quem você acha que esse sistema foi desenvolvido? Por quê?” (Por exemplo: cidadão, profissionais da saúde, etc.)
 
 
 
-Pergunte: “Quem você acha que é o responsável por esse sistema?” (Por exemplo: empresa, empreendedor, marca, etc)
+- Pergunte: “Quem você acha que é o responsável por esse sistema?” (Por exemplo: empresa, empreendedor, marca, etc)
 
 
 ## Cenário
 
-Você é um paciente do Hospital São Francisco e está na sala de espera de hemodiálise e está assistindo a programação da TV presente na sala. Você percebe que há possibilidade de acessar área do paciente para ver mais notícias por meio do QRCode. Você acessa e visualiza no seu celular o sistema.
+Descreva neste campo um cenário (definindo o contexto) em que o sistema pode estar inserido no momento do uso para apresentar para o usuário.
 
 ## Tarefa 1
-Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne para a página inicial.
+Proponha uma tarefa a ser realizada no sistema, a partir do cenário apresentado. 
 
 * Caminhos(s)
 	Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)	
@@ -90,7 +90,7 @@ Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne par
  
 
 ## Tarefa 2
-Jogue uma partida do jogo de xadrez no sistema e, ao ganhar ou perder, jogue novamente, mas agora desistindo da partida.
+Proponha uma tarefa a ser realizada no sistema, a partir do cenário apresentado. 
 
 * Caminhos(s)
 		
@@ -114,7 +114,7 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 
 
 ## Tarefa 3
-Veja qual o que terá no cardápio do café da manhã do dia 03/11 e volte para a tela inicial. 
+Proponha uma tarefa a ser realizada no sistema, a partir do cenário apresentado. 
 
 * Caminhos(s)		
 
@@ -168,4 +168,85 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 ## Conclusões do avaliador sobre o teste com o usuário
 [Observações sobre os problemas encontrados e possíveis soluções]
 
+##
+PARECER TÉCNICO: AVALIAÇÃO HEURÍSTICA				
+##
+
+Nome do sistema:
+
+Acesso (link) para protótipo/sistema: (https://github.com/Gilberto-Modesto/gestao-de-oficinas.github.io)
+
+Nomes dos integrantes da Equipe:
+
+## Título da Heurística	  Descrição da Heurística		
+
+1 Visibilidade do status do sistema
+
+O sistema sempre deve manter os usuários informados sobre o que está acontecendo, por meio de feedback apropriado dentro de um prazo razoável.	
+
+
+2 Correspondência entre o sistema e o mundo real
+
+O sistema deve falar o idioma do usuário, com palavras, frases e conceitos familiares ao usuário, em vez de termos orientados ao sistema. Siga as convenções do mundo real, fazendo as informações aparecerem em uma ordem natural e lógica.	
+
+
+3 Controle e liberdade do usuário
+
+Os usuários geralmente escolhem as funções do sistema por engano e precisam de uma "saída de emergência" claramente marcada para deixar o estado indesejado sem ter que passar por um diálogo prolongado. Suporte para desfazer e refazer.	
+
+
+4 Consistência e padrões
+
+"Os usuários não devem se perguntar se palavras, situações ou ações diferentes significam a mesma coisa."
+
+
+5 Prevenção de erros	
+
+Elimine condições propensas a erros ou verifique-as e apresente aos usuários uma opção de confirmação antes que eles se comprometam com a ação.
+
+
+6 Reconhecimento em vez de recordação	
+
+Minimize a carga de memória do usuário, tornando objetos, ações e opções visíveis. O usuário não deve ter que lembrar informações de uma parte do diálogo para outra. As instruções de uso do sistema devem ser visíveis ou facilmente recuperáveis sempre que apropriado.
+
+
+7 Flexibilidade e eficiência de uso	
+
+Aceleradores - invisíveis para o usuário iniciante - geralmente aceleram a interação do usuário experiente, de modo que o sistema possa atender a usuários inexperientes e experientes. Permita que os usuários adaptem ações frequentes.		
+
+
+8 Design estético e minimalista
+
+Os diálogos não devem conter informações irrelevantes ou raramente necessárias. Cada unidade extra de informação em um diálogo concorre com as unidades relevantes de informação e diminui sua visibilidade relativa.		
+
+
+9 Ajude os usuários a reconhecer, diagnosticar e recuperar de erros
+
+As mensagens de erro devem ser expressas em linguagem simples (sem códigos), indicar com precisão o problema e sugerir construtivamente uma solução.
+
+
+10 Ajuda e documentação	
+
+Mesmo que seja melhor se o sistema puder ser usado sem documentação, pode ser necessário fornecer ajuda e documentação. Essas informações devem ser fáceis de pesquisar, focadas na tarefa do usuário, listar etapas concretas a serem executadas e não serem muito grandes.
+
+
+### Problemas encontrados
+
+
+
+
+
+
+### Sugestões
+
+
+
+
+
+
+## Referência	
+
+“10 Heurísticas de usabilidade para o design de interface do usuário” -  por Jakob Nielsen em 24 de abril de 1994			
+	https://www.nngroup.com/articles/ten-usability-heuristics/ 			
+![image](https://github.com/Gilberto-Modesto/gestao-de-oficinas.github.io/assets/128002028/8a2a7839-7225-47c2-b02e-61ff2a66c00a)
 
