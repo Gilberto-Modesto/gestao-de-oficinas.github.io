@@ -32,17 +32,18 @@ Projeto simples para gerenciamento de uma oficina, desenvolvido com HTML, CSS (B
 - JavaScript
 - Local Storage
 
-- Relatório de Teste com Usuário
-Projeto (Nome do Sistema):
-Equipe:				
-Nome do Avaliador:
-Data:           				
-Participante Nº:
+## Relatório de Teste com Usuário
 
-Proposta
+- Projeto (Nome do Sistema):
+- Equipe:				
+- Nome do Avaliador:
+- Data:           				
+- Participante Nº:
+
+# Proposta
 A proposta deste teste é verificar o entendimento e a usabilidade do projeto desenvolvido a partir das interações de um usuário representativo do público-alvo. O teste também avalia a satisfação geral do uso pelo usuário.
 
-Questões introdutórias e tarefas
+# Questões introdutórias e tarefas
 
 Apresente de forma geral o que é o sistema para o usuário. Pergunte: “Você já ouviu falar desse tipo de sistema?”
 ____Sim    ____Não
