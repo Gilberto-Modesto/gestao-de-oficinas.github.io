@@ -69,20 +69,20 @@ Você é um paciente do Hospital São Francisco e está na sala de espera de hem
 ## Tarefa 1
 Acesse a notícia sobre o “Sonic” no ambiente, abra a notícia e retorne para a página inicial.
 
-`Caminhos(s)
+* Caminhos(s)
 	Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)	
 
-`Sucesso na execução da tarefa
-* 0
-Não completou
+* Sucesso na execução da tarefa
+- 0
+  Não completou
 
-* 1
-Completou com dificuldade ou ajuda
+- 1
+  Completou com dificuldade ou ajuda
 
-* 2
-Completou facilmente
+- 2
+  Completou facilmente
 
- `Anotações / Observações
+ * Anotações / Observações
  
  Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho do usuário diferente ou não realizado, layout da página confundiu o usuário, usuário teve problemas na navegação (especificar), usuário teve problemas com os termos utilizados (especificar), usuário não localizou os itens necessário para realizar a tarefa (especificar), etc.
  
@@ -90,64 +90,61 @@ Completou facilmente
 ## Tarefa 2
 Jogue uma partida do jogo de xadrez no sistema e, ao ganhar ou perder, jogue novamente, mas agora desistindo da partida.
 
-`Caminhos(s)
+* Caminhos(s)
 		
 Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)
 
-`Sucesso na execução da tarefa
-* 0
-Não completou
+* Sucesso na execução da tarefa
+- 0
+  Não completou
 
-* 1
-Completou com dificuldade ou ajuda
+- 1
+  Completou com dificuldade ou ajuda
 
-* 2
-Completou facilmente
+- 2
+  Completou facilmente
 
-`Anotações / Observações
+* Anotações / Observações
 
 Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho errado, layout da página confuso, problemas na navegação, problemas com os termos utilizados (título das abas).
-
-
-
 
 
 
 ## Tarefa 3
 Veja qual o que terá no cardápio do café da manhã do dia 03/11 e volte para a tela inicial. 
 
-`Caminhos(s)
+* Caminhos(s)
 		
-
 
 Descrição dos passos que o usuário deveria dar para alcançar o objetivo da tarefa (não deve ser dado para o usuário, mas utilizado para comparar com o caminho realizado pelo usuário no teste)
 
-`Sucesso na execução da tarefa
+* Sucesso na execução da tarefa
 
-* 0
-  Não completou
+- 0
+   Não completou
 
-* 1
-  Completou com dificuldade ou ajuda
+- 1
+   Completou com dificuldade ou ajuda
 
-* 2
-Completou facilmente
+- 2
+   Completou facilmente
 
-`Anotações / Observações
+* Anotações / Observações
+  
 Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho errado, layout da página confuso, problemas na navegação, problemas com os termos utilizados (título das abas).
 
 
 ## Termine o teste com o questionário abaixo 
 [Você pode adequar essa parte com outras questões significativas para a avaliação do sistema]
 
-* Qual foi a sua impressão geral do sistema?
-* Qual foi a sua impressão sobre as atividades propostas?
-* Você acha que este sistema é atual? Por quê?
-* O que você mais gostou neste sistema?
-* O que você menos gostou neste sistema?
-* Há alguma coisa que você acha que está faltando neste sistema? (Por exemplo: conteúdo, funções, etc.)
-* Se você fosse descrever este sistema para um colega em uma sentença ou duas, o que você diria?
-* Você gostaria de fazer algum comentário final ou pergunta?
+- Qual foi a sua impressão geral do sistema?
+- Qual foi a sua impressão sobre as atividades propostas?
+- Você acha que este sistema é atual? Por quê?
+- O que você mais gostou neste sistema?
+- O que você menos gostou neste sistema?
+- Há alguma coisa que você acha que está faltando neste sistema? (Por exemplo: conteúdo, funções, etc.)
+- Se você fosse descrever este sistema para um colega em uma sentença ou duas, o que você diria?
+- Você gostaria de fazer algum comentário final ou pergunta?
 
 ## Conclusões do avaliador sobre o teste com o usuário
 [Observações sobre os problemas encontrados e possíveis soluções]
