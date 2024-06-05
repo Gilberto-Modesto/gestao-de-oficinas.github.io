@@ -168,9 +168,8 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 ## Conclusões do avaliador sobre o teste com o usuário
 [Observações sobre os problemas encontrados e possíveis soluções]
 
-##
-PARECER TÉCNICO: AVALIAÇÃO HEURÍSTICA				
-##
+
+## PARECER TÉCNICO: AVALIAÇÃO HEURÍSTICA				
 
 Nome do sistema:
 
