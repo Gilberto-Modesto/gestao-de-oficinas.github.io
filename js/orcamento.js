@@ -46,7 +46,7 @@ function mostrarOrcamentos() {
   const filterDiv = document.createElement('div');
   filterDiv.classList.add('filter-container', 'mb-3');
 
-  ['Placa do Veículo', 'Descrição do Serviço', 'Peças', 'Valor Total'].forEach((headerText, index) => {
+  ['ID do Veículo', 'Descrição do Serviço', 'Peças', 'Valor Total'].forEach((headerText, index) => {
       const input = document.createElement('input');
       input.type = 'text';
       input.placeholder = `Filtrar por ${headerText}`;
