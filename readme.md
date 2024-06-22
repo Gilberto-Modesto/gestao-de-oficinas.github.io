@@ -173,7 +173,7 @@ Anote por quê o usuário obteve sucesso na tarefa ou não. Por exemplo: caminho
 
 Nome do sistema:
 
-Acesso (link) para protótipo/sistema: (https://github.com/Gilberto-Modesto/gestao-de-oficinas.github.io)
+Acesso (link) para protótipo/sistema: https://sgo-gestaodeoficinas.netlify.app/
 
 Nomes dos integrantes da Equipe:
 
